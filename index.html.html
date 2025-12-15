@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)file:///C:/Users/natha/Downloads/SOS%20MS%20-%20Prote%C3%A7%C3%A3o%20Ambiental.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS MS - Proteção Ambiental</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2d5016;
+            --secondary-green: #4a7c2c;
+            --light-green: #7fb069;
+            --accent-green: #a7c957;
+            --bg-light: #f0f7eb;
+            --text-dark: #1a3d0a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bg-light) 0%, #e8f5e0 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-green);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .hero h2 {
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--secondary-green);
+            line-height: 1.6;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--light-green), var(--accent-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .feature-card p {
+            color: var(--secondary-green);
+            line-height: 1.5;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+            color: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: var(--text-dark);
+        }
+
+        .btn-primary:hover {
+            background: var(--light-green);
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-green);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-dark);
+            background: none;
+            border: none;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--light-green);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--secondary-green);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .location-info {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: var(--secondary-green);
+            color: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 1001;
+        }
+
+        .chat-container {
+            height: 400px;
+            overflow-y: auto;
+            border: 2px solid var(--light-green);
+            border-radius: 10px;
+            padding: 1rem;
+            background: var(--bg-light);
+            margin-bottom: 1rem;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border-radius: 10px;
+            max-width: 80%;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message-bot {
+            background: var(--white);
+            color: var(--text-dark);
+            margin-right: auto;
+            border-left: 4px solid var(--secondary-green);
+        }
+
+        .message-user {
+            background: var(--secondary-green);
+            color: var(--white);
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .message-time {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 0.3rem;
+        }
+
+        .chat-input-container {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chat-input {
+            flex: 1;
+        }
+
+        .quick-replies {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .quick-reply-btn {
+            padding: 0.8rem 1.2rem;
+            background: var(--white);
+            border: 2px solid var(--light-green);
+            border-radius: 25px;
+            cursor: pointer;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .quick-reply-btn:hover {
+            background: var(--secondary-green);
+            color: var(--white);
+            border-color: var(--secondary-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .quick-reply-btn:active {
+            transform: translateY(0);
+        }
+
+        .typing-indicator {
+            display: none;
+            padding: 0.8rem;
+            background: var(--white);
+            border-radius: 10px;
+            max-width: 80px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--secondary-green);
+        }
+
+        .typing-indicator span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--secondary-green);
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .education-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .education-card h4 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .education-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .education-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--secondary-green);
+        }
+
+        .education-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🌿</div>
+                <h1>SOS MS</h1>
+            </div>
+            <nav>
+                <a href="file:///C:/Users/natha/OneDrive/sos%20ms.html#home">Início</a>
+                <a href="file:///C:/Users/natha/OneDrive/sos%20ms.html#" onclick="openModal(&#39;denunciaModal&#39;); return false;">Denunciar</a>
+                <a href="file:///C:/Users/natha/OneDrive/sos%20ms.html#" onclick="openModal(&#39;educacaoModal&#39;); return false;">Educação</a>
+                <a href="file:///C:/Users/natha/OneDrive/sos%20ms.html#contato" onclick="openModal(&#39;contatoModal&#39;); return false;">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h2>Proteja o Meio Ambiente do Mato Grosso do Sul</h2>
+            <p>Sistema integrado de denúncias ambientais com geolocalização, notificações em tempo real e área educativa. Juntos podemos fazer a diferença na preservação do nosso ecossistema.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card" onclick="openModal(&#39;denunciaModal&#39;)">
+                <div class="feature-icon">📍</div>
+                <h3>Geolocalização Precisa</h3>
+                <p>Registre ocorrências com localização GPS automática para ação rápida das autoridades.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔔</div>
+                <h3>Notificações em Tempo Real</h3>
+                <p>Receba atualizações sobre suas denúncias e alertas ambientais da sua região.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📞</div>
+                <h3>Canal Telefônico</h3>
+                <p>Contato direto com órgãos ambientais através do nosso sistema integrado.</p>
+            </div>
+
+            <div class="feature-card" onclick="openModal(&#39;educacaoModal&#39;)">
+                <div class="feature-icon">📚</div>
+                <h3>Área Educativa</h3>
+                <p>Aprenda sobre preservação ambiental e práticas sustentáveis.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Denúncias Anônimas</h3>
+                <p>Sua identidade protegida enquanto contribui para o meio ambiente.</p>
+            </div>
+
+            <div class="feature-card" onclick="openModal(&#39;mensagensModal&#39;)">
+                <div class="feature-icon">💬</div>
+                <h3>Caixa de Mensagens</h3>
+                <p>Comunicação direta e acompanhamento das suas denúncias.</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Faça Sua Parte Agora</h2>
+            <p>Registre uma ocorrência ambiental e ajude a proteger nosso estado</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="openModal(&#39;denunciaModal&#39;)">Registrar Denúncia</button>
+                <button class="btn btn-secondary" onclick="openModal(&#39;educacaoModal&#39;)">Área Educativa</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Denúncia -->
+    <div id="denunciaModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal(&#39;denunciaModal&#39;)">×</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1.5rem;">Registrar Denúncia Ambiental</h2>
+            
+            <form id="denunciaForm">
+                <div class="form-group">
+                    <label>Tipo de Ocorrência</label>
+                    <select id="tipoOcorrencia" required="">
+                        <option value="">Selecione...</option>
+                        <option value="desmatamento">Desmatamento Ilegal</option>
+                        <option value="queimada">Queimada</option>
+                        <option value="poluicao">Poluição de Água/Solo</option>
+                        <option value="cacailegal">Caça Ilegal</option>
+                        <option value="descarte">Descarte Irregular de Lixo</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Descrição da Ocorrência</label>
+                    <textarea id="descricao" placeholder="Descreva o que você presenciou..." required=""></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Localização</label>
+                    <button type="button" class="btn btn-secondary" onclick="getLocation()" style="width: 100%;">📍 Obter Localização Atual</button>
+                    <div id="locationInfo" class="location-info" style="display: none;">
+                        <p><strong>Latitude:</strong> <span id="lat"></span></p>
+                        <p><strong>Longitude:</strong> <span id="lng"></span></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Denúncia Anônima?</label>
+                    <select id="anonima">
+                        <option value="sim">Sim, manter anônimo</option>
+                        <option value="nao">Não, posso me identificar</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="contatoGroup">
+                    <label>Telefone para Contato (opcional)</label>
+                    <input type="tel" id="telefone" placeholder="(67) 99999-9999">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Denúncia</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Educação -->
+    <div id="educacaoModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal(&#39;educacaoModal&#39;)">×</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1.5rem;">Área Educativa</h2>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <h4>🌳 Prevenção de Queimadas</h4>
+                    <ul>
+                        <li>Não jogue pontas de cigarro no solo</li>
+                        <li>Evite fazer fogueiras em dias secos</li>
+                        <li>Não queime lixo ou entulho</li>
+                        <li>Denuncie queimadas ilegais</li>
+                        <li>Mantenha aceiros limpos em propriedades rurais</li>
+                    </ul>
+                </div>
+
+                <div class="education-card">
+                    <h4>💧 Preservação da Água</h4>
+                    <ul>
+                        <li>Não despeje óleo no ralo</li>
+                        <li>Evite uso de agrotóxicos próximo a rios</li>
+                        <li>Preserve matas ciliares</li>
+                        <li>Denuncie poluição de mananciais</li>
+                        <li>Economize água no dia a dia</li>
+                    </ul>
+                </div>
+
+                <div class="education-card">
+                    <h4>♻️ Descarte Correto</h4>
+                    <ul>
+                        <li>Separe lixo reciclável do orgânico</li>
+                        <li>Descarte pilhas e baterias em locais apropriados</li>
+                        <li>Não jogue lixo em terrenos baldios</li>
+                        <li>Utilize ecopontos da sua cidade</li>
+                        <li>Composte resíduos orgânicos</li>
+                    </ul>
+                </div>
+
+                <div class="education-card">
+                    <h4>🦜 Proteção da Fauna</h4>
+                    <ul>
+                        <li>Não compre animais silvestres</li>
+                        <li>Denuncie tráfico de animais</li>
+                        <li>Não alimente animais selvagens</li>
+                        <li>Respeite áreas de preservação</li>
+                        <li>Apoie projetos de conservação</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-light); border-radius: 10px;">
+                <h4 style="color: var(--primary-green); margin-bottom: 1rem;">📞 Contatos Importantes</h4>
+                <p><strong>IBAMA:</strong> 0800 61 8080</p>
+                <p><strong>Polícia Ambiental MS:</strong> 190</p>
+                <p><strong>IMASUL:</strong> (67) 3318-6000</p>
+                <p><strong>Corpo de Bombeiros:</strong> 193</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificação -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Modal de Contato -->
+    <div id="contatoModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal(&#39;contatoModal&#39;)">×</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1.5rem;">Contatos SOS MS</h2>
+            
+            <div style="padding: 1rem;">
+                <div style="margin-bottom: 2rem; padding: 1.5rem; background: var(--bg-light); border-radius: 10px;">
+                    <h4 style="color: var(--primary-green); margin-bottom: 1rem;">📞 Emergências Ambientais</h4>
+                    <p style="margin: 0.5rem 0;"><strong>IBAMA:</strong> 0800 61 8080</p>
+                    <p style="margin: 0.5rem 0;"><strong>Polícia Ambiental MS:</strong> 190</p>
+                    <p style="margin: 0.5rem 0;"><strong>Corpo de Bombeiros:</strong> 193</p>
+                    <p style="margin: 0.5rem 0;"><strong>IMASUL:</strong> (67) 3318-6000</p>
+                </div>
+
+                <div style="margin-bottom: 2rem; padding: 1.5rem; background: var(--bg-light); border-radius: 10px;">
+                    <h4 style="color: var(--primary-green); margin-bottom: 1rem;">📧 Contato SOS MS</h4>
+                    <p style="margin: 0.5rem 0;"><strong>Email:</strong> contato@sosms.gov.br</p>
+                    <p style="margin: 0.5rem 0;"><strong>WhatsApp:</strong> (67) 99999-0000</p>
+                    <p style="margin: 0.5rem 0;"><strong>Horário:</strong> 24 horas por dia</p>
+                </div>
+
+                <div style="padding: 1.5rem; background: var(--bg-light); border-radius: 10px;">
+                    <h4 style="color: var(--primary-green); margin-bottom: 1rem;">🏢 Endereço</h4>
+                    <p style="margin: 0.5rem 0;">Av. do Meio Ambiente, 1000</p>
+                    <p style="margin: 0.5rem 0;">Campo Grande - MS</p>
+                    <p style="margin: 0.5rem 0;">CEP: 79000-000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Mensagens -->
+    <div id="mensagensModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal(&#39;mensagensModal&#39;)">×</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1.5rem;">💬 Atendimento SOS MS</h2>
+            
+            <div class="chat-container" id="chatContainer">
+                <div class="message message-bot">
+                    <div>Olá! Bem-vindo ao SOS MS. 🌿</div>
+                    <div>Selecione uma das opções abaixo:</div>
+                    <div class="message-time" id="initialTime">17:13</div>
+                </div>
+            </div>
+
+            <div class="typing-indicator" id="typingIndicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="quick-replies" id="quickReplies">
+                <button class="quick-reply-btn" onclick="selectOption(&#39;status&#39;)">📋 Consultar Status de Denúncia</button>
+                <button class="quick-reply-btn" onclick="selectOption(&#39;como-denunciar&#39;)">❓ Como Fazer uma Denúncia</button>
+                <button class="quick-reply-btn" onclick="selectOption(&#39;tipos&#39;)">📝 Tipos de Denúncias</button>
+                <button class="quick-reply-btn" onclick="selectOption(&#39;emergencia&#39;)">🚨 Números de Emergência</button>
+                <button class="quick-reply-btn" onclick="selectOption(&#39;educacao&#39;)">📚 Dicas de Preservação</button>
+                <button class="quick-reply-btn" onclick="selectOption(&#39;contato&#39;)">📞 Falar com Atendente</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentLocation = null;
+        let conversationStep = 0;
+
+        // Inicializa o horário da mensagem inicial
+        document.addEventListener('DOMContentLoaded', function() {
+            const initialTime = document.getElementById('initialTime');
+            if (initialTime) {
+                initialTime.textContent = getCurrentTime();
+            }
+        });
+
+        // Respostas automáticas baseadas nas opções
+        const flowResponses = {
+            'status': {
+                messages: [
+                    'Para consultar o status da sua denúncia, você precisa do número do protocolo.',
+                    'Exemplo: MS45892',
+                ],
+                followUp: [
+                    { text: '📋 Protocolo MS45892', action: 'status-45892' },
+                    { text: '📋 Protocolo MS38471', action: 'status-38471' },
+                    { text: '🔙 Voltar ao Menu', action: 'menu' }
+                ]
+            },
+            'status-45892': {
+                messages: [
+                    '✅ Protocolo MS45892 encontrado!',
+                    '🔥 Tipo: Queimada ilegal',
+                    '📍 Local: Zona Rural de Aquidauana',
+                    '📅 Data: 10/12/2025',
+                    '⏳ Status: EM ANÁLISE',
+                    'Equipe de fiscalização foi acionada. Previsão de vistoria: 15/12/2025'
+                ],
+                followUp: [
+                    { text: '📞 Contatar Responsável', action: 'contato' },
+                    { text: '🔙 Voltar ao Menu', action: 'menu' }
+                ]
+            },
+            'status-38471': {
+                messages: [
+                    '✅ Protocolo MS38471 encontrado!',
+                    '🗑️ Tipo: Descarte irregular de lixo',
+                    '📍 Local: Av. Afonso Pena, Campo Grande',
+                    '📅 Data: 08/12/2025',
+                    '✅ Status: FISCALIZAÇÃO AGENDADA',
+                    'Vistoria agendada para 14/12/2025 às 09:00h'
+                ],
+                followUp: [
+                    { text: '📞 Contatar Responsável', action: 'contato' },
+                    { text: '🔙 Voltar ao Menu', action: 'menu' }
+                ]
+            },
+            'como-denunciar': {
+                messages: [
+                    'Para fazer uma denúncia é muito fácil! Siga os passos:',
+                    '1️⃣ Clique no botão "Denunciar" no menu principal',
+                    '2️⃣ Selecione o tipo de ocorrência',
+                    '3️⃣ Descreva o que você presenciou',
+                    '4️⃣ Clique em "Obter Localização" para marcar o local',
+                    '5️⃣ Escolha se quer denunciar anonimamente',
+                    '6️⃣ Envie! Você receberá um número de protocolo',
+                    'Suas denúncias são protegidas e confidenciais! 🔒'
+                ],
+                followUp: [
+                    { text: '📝 Tipos de Denúncias', action: 'tipos' },
+                    { text: '🔙 Voltar ao Menu', action: 'menu' }
+                ]
+            },
+            'tipos': {
+                messages: [
+                    'Você pode denunciar as seguintes ocorrências:',
+                    '🔥 Queimadas ilegais',
+                    '🌳 Desmatamento ilegal',
+                    '💧 Poluição de rios, lagos e solo',
+                    '🦜 Caça e tráfico de animais silvestres',
+                    '🗑️ Descarte irregular de lixo e entulho',
+                    '🏭 Poluição industrial',
+                    '🚧 Crimes contra o Pantanal',
+                    'Todas as denúncias são investigadas! 🔍'
+                ],
+                followUp: [
+                    { text: '❓ Como Fazer uma Denúncia', action: 'como-denunciar' },
+                    { text: '🔙 Voltar ao Menu', action: 'menu' }
+                ]
+            },
+            'emergencia': {
+                messages: [
+                    '🚨 NÚMEROS DE EMERGÊNCIA:',
+                    '📞 IBAMA: 0800 61 8080',
+                    '📞 Polícia Ambiental MS: 190',
+                    '📞 Corpo de Bombeiros: 193',
+                    '📞 IMASUL: (67) 3318-6000',
+                    '📞 Defesa Civil: 199',
+                    'Atendimento 24 horas! Ligue em caso de emergência ambiental.'
+                ],
+                followUp: [
+                    { text: '📞 Mais Contatos', action: 'contato' },
+                    { text: '🔙 Voltar ao Menu', action: 'menu' }
+                ]
+            },
+            'educacao': {
+                messages: [
+                    '📚 DICAS DE PRESERVAÇÃO AMBIENTAL:',
+                    '🌳 Não jogue lixo em locais inapropriados',
+                    '💧 Economize água e preserve nascentes',
+                    '🔥 Evite queimadas, principalmente na seca',
+                    '♻️ Pratique a reciclagem',
+                    '🦜 Não compre animais silvestres',
+                    '🌱 Plante árvores nativas',
+                    '🚗 Use menos o carro, ande mais a pé ou de bike',
+                    'Pequenas ações fazem grande diferença! 🌍'
+                ],
+                followUp: [
+                    { text: '📖 Área Educativa Completa', action: 'educacao-completa' },
+                    { text: '🔙 Voltar ao Menu', action: 'menu' }
+                ]
+            },
+            'educacao-completa': {
+                messages: [
+                    'Acesse nossa área educativa completa clicando no menu "Educação" na parte superior!',
+                    'Lá você encontrará informações detalhadas sobre:',
+                    '• Prevenção de queimadas',
+                    '• Preservação da água',
+                    '• Descarte correto de resíduos',
+                    '• Proteção da fauna silvestre',
+                    'Educação ambiental é fundamental! 📚🌿'
+                ],
+                followUp: [
+                    { text: '🔙 Voltar ao Menu', action: 'menu' }
+                ]
+            },
+            'contato': {
+                messages: [
+                    '📞 CANAIS DE ATENDIMENTO SOS MS:',
+                    '📧 Email: contato@sosms.gov.br',
+                    '💬 WhatsApp: (67) 99999-0000',
+                    '🏢 Endereço: Av. do Meio Ambiente, 1000',
+                    '   Campo Grande - MS, CEP: 79000-000',
+                    '⏰ Atendimento: 24 horas por dia',
+                    'Estamos aqui para ajudar! 🤝'
+                ],
+                followUp: [
+                    { text: '🚨 Números de Emergência', action: 'emergencia' },
+                    { text: '🔙 Voltar ao Menu', action: 'menu' }
+                ]
+            },
+            'menu': {
+                messages: [
+                    'Selecione uma das opções abaixo:'
+                ],
+                followUp: [
+                    { text: '📋 Consultar Status de Denúncia', action: 'status' },
+                    { text: '❓ Como Fazer uma Denúncia', action: 'como-denunciar' },
+                    { text: '📝 Tipos de Denúncias', action: 'tipos' },
+                    { text: '🚨 Números de Emergência', action: 'emergencia' },
+                    { text: '📚 Dicas de Preservação', action: 'educacao' },
+                    { text: '📞 Falar com Atendente', action: 'contato' }
+                ]
+            }
+        };
+
+        function getCurrentTime() {
+            const now = new Date();
+            return now.getHours().toString().padStart(2, '0') + ':' + 
+                   now.getMinutes().toString().padStart(2, '0');
+        }
+
+        function addMessage(text, isUser = false) {
+            const chatContainer = document.getElementById('chatContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'message-user' : 'message-bot'}`;
+            
+            const textDiv = document.createElement('div');
+            textDiv.innerHTML = text;
+            messageDiv.appendChild(textDiv);
+            
+            const timeDiv = document.createElement('div');
+            timeDiv.className = 'message-time';
+            timeDiv.textContent = getCurrentTime();
+            messageDiv.appendChild(timeDiv);
+            
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function showTypingIndicator() {
+            document.getElementById('typingIndicator').style.display = 'block';
+            const chatContainer = document.getElementById('chatContainer');
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function hideTypingIndicator() {
+            document.getElementById('typingIndicator').style.display = 'none';
+        }
+
+        function updateQuickReplies(options) {
+            const quickReplies = document.getElementById('quickReplies');
+            quickReplies.innerHTML = '';
+            
+            options.forEach(option => {
+                const btn = document.createElement('button');
+                btn.className = 'quick-reply-btn';
+                btn.textContent = option.text;
+                btn.onclick = () => selectOption(option.action);
+                quickReplies.appendChild(btn);
+            });
+        }
+
+        function selectOption(option) {
+            const response = flowResponses[option];
+            
+            if (!response) {
+                addMessage('Opção não encontrada. Tente novamente.', false);
+                return;
+            }
+
+            // Remove botões temporariamente
+            document.getElementById('quickReplies').style.display = 'none';
+            
+            // Mostra indicador de digitação
+            showTypingIndicator();
+            
+            // Envia todas as mensagens com delay
+            response.messages.forEach((msg, index) => {
+                setTimeout(() => {
+                    if (index === response.messages.length - 1) {
+                        hideTypingIndicator();
+                    }
+                    addMessage(msg, false);
+                    
+                    // Na última mensagem, mostra os botões de follow-up
+                    if (index === response.messages.length - 1) {
+                        setTimeout(() => {
+                            document.getElementById('quickReplies').style.display = 'flex';
+                            updateQuickReplies(response.followUp);
+                        }, 500);
+                    }
+                }, (index + 1) * 600);
+            });
+        }
+
+        function sendMessage() {
+            // Função removida - interação apenas por botões
+        }
+
+        function sendQuickReply(type) {
+            // Função removida - substituída por selectOption
+        }
+
+        function handleChatKeyPress(event) {
+            // Função removida - sem input de texto
+        }
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'flex';
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                showNotification('Geolocalização não é suportada pelo seu navegador', 'error');
+            }
+        }
+
+        function showPosition(position) {
+            currentLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+            
+            document.getElementById('lat').textContent = currentLocation.lat.toFixed(6);
+            document.getElementById('lng').textContent = currentLocation.lng.toFixed(6);
+            document.getElementById('locationInfo').style.display = 'block';
+            
+            showNotification('Localização obtida com sucesso!', 'success');
+        }
+
+        function showError(error) {
+            let message = '';
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    message = 'Permissão de localização negada. Por favor, habilite nas configurações.';
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    message = 'Informação de localização indisponível.';
+                    break;
+                case error.TIMEOUT:
+                    message = 'Tempo esgotado ao tentar obter localização.';
+                    break;
+                default:
+                    message = 'Erro desconhecido ao obter localização.';
+            }
+            showNotification(message, 'error');
+        }
+
+        function showNotification(message, type) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.style.display = 'block';
+            notification.style.background = type === 'success' ? 'var(--secondary-green)' : '#d32f2f';
+            
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 4000);
+        }
+
+        document.getElementById('denunciaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Validação da localização
+            if (!currentLocation) {
+                showNotification('Por favor, obtenha a localização antes de enviar', 'error');
+                return false;
+            }
+
+            // Validação dos campos
+            const tipo = document.getElementById('tipoOcorrencia').value;
+            const descricao = document.getElementById('descricao').value;
+            
+            if (!tipo || !descricao) {
+                showNotification('Por favor, preencha todos os campos obrigatórios', 'error');
+                return false;
+            }
+
+            // Coleta dos dados do formulário
+            const formData = {
+                tipo: tipo,
+                descricao: descricao,
+                localizacao: currentLocation,
+                anonima: document.getElementById('anonima').value,
+                telefone: document.getElementById('telefone').value,
+                data: new Date().toISOString()
+            };
+
+            // Simulação de envio
+            console.log('Denúncia registrada:', formData);
+            
+            // Gera número de protocolo
+            const protocolo = 'MS' + Math.floor(Math.random() * 100000);
+            
+            showNotification('✅ Denúncia enviada com sucesso! Protocolo: ' + protocolo, 'success');
+            
+            // Limpa o formulário e fecha o modal
+            setTimeout(() => {
+                this.reset();
+                document.getElementById('locationInfo').style.display = 'none';
+                currentLocation = null;
+                closeModal('denunciaModal');
+            }, 1500);
+            
+            return false;
+        });
+
+        document.getElementById('anonima').addEventListener('change', function() {
+            const contatoGroup = document.getElementById('contatoGroup');
+            contatoGroup.style.display = this.value === 'nao' ? 'block' : 'none';
+        });
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
+
+</body></html>
